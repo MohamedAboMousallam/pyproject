@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_restful import Resource, Api, reqparse
+from werkzeug.datastructures import FileStorage
 import pickle
 import numpy as np
 from PIL import Image
@@ -288,5 +289,5 @@ api.add_resource(HeartPrediction, '/predict_heart')
 api.add_resource(MalariaPrediction, '/predict_malaria')
 api.add_resource(PneumoniaPrediction, '/predict_pneumonia')
 
-if __name__ == '__app__':
+if __name__ == '__main__':
     app.run(debug=True)
